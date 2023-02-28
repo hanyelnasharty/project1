@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script> 
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav">
+                <li><a id="home" href="#">Home</a></li>
+                <li><a id="bio" href="#">Biography</a></li>
+                <li><a id="resume" href="#">Resume</a></li>
+                <li><a id="projects" href="#">Projects</a></li>
+            </ul>
+        </nav>
+        <div class="info">
+            <h1>Hany Elnasharty</h1>
+            <img id="photo" src="imgs/IMG_6713.JPG">
+        </div>
+    </header>
+    <div class="home">
+        <h2 id="home-h2">Hi! I'm Hany,<br> an aspiring Web Developer.</h2>
+        <h3 id="home-h3">Welcome to my first project!</h3>
+        <p id="home-txt">I recently started my web development journey at General Assembly to make a full transition into the tech industry.</p>
+    </div>
+    <div class="surprise button">
+        <button id="open">Click Here For a Surprise !!</button>
+    </div>
+    <div id="modal">
+        <div id="modal-textbox">
+            <h1 id="surprise-text">Just kidding :)</h1>
+            <h3 id="get-out">Now go back...</h3>
+            <div id="modal-footer">
+                <button class="close button" id="close" href="#">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+   <footer>
+        <div class="social">
+            <button class="dark-mode">Dark Mode</button>
+            <a rel="githubprofile" href="https://github.com/hanyelnasharty" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+            <!-- <a rel="facebook-profile" href="https://www.facebook.com/hany.elnasharty/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a> -->
+            <a rel="linkedin-page" href="https://www.linkedin.com/in/hany-elnasharty/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
+   </footer>
+</body>
+</html>
