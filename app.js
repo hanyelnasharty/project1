@@ -62,12 +62,14 @@ $(() => {
         displayBio();
         hideHome();
         hideResume();
+        hideProjects()
     })
 
     $homeBtn.on('click', () => {
         displayHome();
         hideBio();
-        hideResume()
+        hideResume();
+        hideProjects()
     })
 
     const $resumeBtn = $('#resume')
@@ -87,11 +89,29 @@ $(() => {
         displayResume();
         hideBio();
         hideHome();
+        hideProjects()
     })
 
     const $projectsBtn = $('#projects')
     const $projectsDiv = $('<div>').addClass('projects') // appendTo('body')
     const $projectsH2 = $('<h2>').text('Projects :').attr('id', 'projects-h2').appendTo($projectsDiv)
+    
+
+    const displayProjects = () => {
+            $('body').append($projectsDiv);
+       }
+
+    const hideProjects = () => {
+        $projectsDiv.remove()
+       }
+
+    $projectsBtn.on('click', () => {
+          displayProjects();
+          hideBio();
+          hideResume();
+          hideHome()
+       })
+       
 
     
 
