@@ -176,6 +176,7 @@ li {
     margin-top: 60px;
     margin-left: 40px;
     cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
 }
 
 #open {
@@ -183,6 +184,7 @@ li {
     width: 200px;
     padding: 10px;
     font-size: large;
+    font-family: 'Work Sans', sans-serif;
     background-color: #B53838;
     color: whitesmoke;
     cursor: pointer;
