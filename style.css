@@ -207,6 +207,7 @@ footer {
 .dark-mode {
     background-color: inherit;
     color: #00A0C6;
+    border: 1px #B53838 solid;
     border-radius: 0 60px 60px 0;
     margin-left: 50px;
     margin-right: 100px;
