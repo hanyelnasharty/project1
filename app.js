@@ -18,9 +18,10 @@ $(() => {
     $closeBtn.on('click', closeModal)
     // ==== MODAL ====
 
+
+    // ==== DARK MODE ====
     const $body = $('body')
     const darkMode = () => {
-        console.log(typeof $body.css('background-color'));
         if ('rgb(245, 245, 245)' == $body.css('background-color')){
         $body.css('background-color', '#000000');
         $body.css('color', '#f5f5f5')
@@ -31,24 +32,35 @@ $(() => {
     }
 
     $('.dark-mode').on('click', darkMode)
+    // ==== DARK MODE ====
 
 
     const $homeBtn = $('#home')
     const $homeDiv = $('.home')
     
-    const displayHome = () => {
-        $homeDiv.css('display', 'block')
-    }
-
-
-    const hideHome = () => {
-        $homeDiv.css('display', 'none')
-    }
-
     const $bioBtn = $('#bio')
     const $bioDiv = $('<div>').addClass('bio')
     const $bioH2 = $('<h2>').attr('id', 'bio-h2').text('Biography').appendTo($bioDiv)
     const $bioTxt = $('<p>').attr('id', 'bio-txt').text('I am Hany Elnasharty, a tech enthusiast who\’s recently started professionally developing my programming skills. However, this isn\’t my first encounter with tech; I have been on and off with it through self study. Having attended business school and coming from a finance background, my mind has always been analytical and very detail-oriented, which was reflected on my academic and professional life. During college, I studied and worked and successfully maintained a good work-life balance. I always look for new challenges and consistently try to explore new opportunities in order to advance my status. Tech was my recent endeavor that started by joining Code Academy and learning some basics. After a short while I learned about coding bootcamps and what they can offer me in terms of practical knowledge and career coaching and decided to enroll full-time at General Assembly to maximize the benefits that come from the intensity of their training and to start -what I hope to be- a new, long and successful chapter in my life.').appendTo($bioDiv)
+
+    
+    const $resumeBtn = $('#resume')
+    const $resumeDiv = $('<div>').addClass('resume')
+    const $resumeH2 = $('<h2>').attr('id', 'resume-h2').text('Resume :').appendTo($resumeDiv)
+    const $resumeImage = $('<img>').attr('src', 'imgs/resume.png').addClass('resume-img').appendTo($resumeDiv)
+
+    const $projectsBtn = $('#projects')
+    const $projectsDiv = $('<div>').addClass('projects')
+    const $projectsH2 = $('<h2>').text('Projects : TBD').attr('id', 'projects-h2').appendTo($projectsDiv)
+   
+    
+    const displayHome = () => {
+        $homeDiv.css('display', 'block')
+    }
+
+    const hideHome = () => {
+        $homeDiv.css('display', 'none')
+    }
 
     const displayBio = () => {  
         $('body').append($bioDiv)
@@ -56,26 +68,6 @@ $(() => {
     const hideBio = () => {
         $bioDiv.remove()
     }
-
-
-    $bioBtn.on('click', () => {
-        displayBio();
-        hideHome();
-        hideResume();
-        hideProjects()
-    })
-
-    $homeBtn.on('click', () => {
-        displayHome();
-        hideBio();
-        hideResume();
-        hideProjects()
-    })
-
-    const $resumeBtn = $('#resume')
-    const $resumeDiv = $('<div>').addClass('resume')
-    const $resumeH2 = $('<h2>').attr('id', 'resume-h2').text('Resume :').appendTo($resumeDiv)
-    const $resumeImage = $('<img>').attr('src', 'imgs/resume.png').addClass('resume-img').appendTo($resumeDiv)
 
     const displayResume = () => {
         $('body').append($resumeDiv)
@@ -85,6 +77,28 @@ $(() => {
         $resumeDiv.remove()
     }
 
+    const displayProjects = () => {
+        $('body').append($projectsDiv);
+   }
+
+    const hideProjects = () => {
+        $projectsDiv.remove()
+   }
+
+    $homeBtn.on('click', () => {
+        displayHome();
+        hideBio();
+        hideResume();
+        hideProjects()
+    })
+
+    $bioBtn.on('click', () => {
+        displayBio();
+        hideHome();
+        hideResume();
+        hideProjects()
+    })
+
     $resumeBtn.on('click', () => {
         displayResume();
         hideBio();
@@ -92,28 +106,12 @@ $(() => {
         hideProjects()
     })
 
-    const $projectsBtn = $('#projects')
-    const $projectsDiv = $('<div>').addClass('projects') // appendTo('body')
-    const $projectsH2 = $('<h2>').text('Projects :').attr('id', 'projects-h2').appendTo($projectsDiv)
-    
-
-    const displayProjects = () => {
-            $('body').append($projectsDiv);
-       }
-
-    const hideProjects = () => {
-        $projectsDiv.remove()
-       }
-
     $projectsBtn.on('click', () => {
-          displayProjects();
-          hideBio();
-          hideResume();
-          hideHome()
-       })
-       
-
-    
+        displayProjects();
+        hideBio();
+        hideResume();
+        hideHome()
+     })
 
 
 })
